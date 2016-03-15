@@ -9,7 +9,9 @@
 title: Tenthusiast
 email: your-email@domain.com
 description: >
-  Stumble upon a problem, think about it, solve it and share it !
+  Stumble upon a problem,
+  think about it,
+  solve it and share it !
 logo: "assets/images/logo.jpg"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://gwillmann.github.io" # the base hostname & protocol for your site
