@@ -4,7 +4,6 @@ title:  "Add custom blocks to SonataAdminBundle admin panel in Symfony"
 date:   2016-03-12 17:07:04 +0100
 categories: development, symfony, sonata, php
 ---
-# Introduction
 Adding custom blocks to your admin panel is not as straightforward as you would
 expect.
 Here are the basics to do so :

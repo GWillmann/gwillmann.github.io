@@ -9,9 +9,8 @@
 title: Tenthusiast
 email: your-email@domain.com
 description: >
-  -Technology Enthusiast-
   Stumble upon a problem, think about it, solve it and share it !
-logo: "/assets/images/logo.jpg"
+logo: "assets/images/logo.jpg"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://gwillmann.github.io" # the base hostname & protocol for your site
 paginate:	5 # The number of posts to show per page on your homepage
@@ -19,7 +18,7 @@ paginate:	5 # The number of posts to show per page on your homepage
 name: 'Grégoire Willmann'
 bio: >
   French entrepreneur
-author_image: "/assets/images/author.jpg"
+author_image: "assets/images/author.jpg"
 twitter_username: lejonqc
 github_username:  gwillmann
 
