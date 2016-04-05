@@ -1,0 +1,41 @@
+---
+layout: post
+title: Use node.js in a symfony2 app on Heroku
+date: 2015-12-18 14:04:34.000000000 +01:00
+type: post
+published: true
+status: publish
+categories:
+- Development
+tags: []
+meta:
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+  _publicize_job_id: '17916190697'
+  _thumbnail_id: '69'
+  _edit_last: '73762926'
+  geo_public: '0'
+author:
+  login: greggggy
+  email: gregwillm@gmail.com
+  display_name: greggggy
+  first_name: ''
+  last_name: ''
+---
+<p>So we wanted to minify our Javascript and CSS files in our symfony 2 app.</p>
+<p>Following the <a href="http://symfony.com/doc/2.7/cookbook/assetic/uglifyjs.html">symfony's cookbook</a> seemed pretty easy but we just did not know how to install/use node executable on Heroku.</p>
+<p>Turns out to be fairly easy : <span style="text-decoration:underline;">you have to use multiple heroku buildpacks</span>.</p>
+<ul>
+<li>If you have not done it yet add a default buildpack :<br />
+<blockquote><p>heroku buildpacks:set heroku/php</p></blockquote>
+</li>
+<li>Then add the nodejs buildpack in order to be able to use uglifyjs2 :<br />
+<blockquote><p>heroku buildpacks:add -i 1 heroku/nodejs</p></blockquote>
+</li>
+<li>Add a file at the root of your symfony project named <b>package.json</b> with the following content in it :<br />
+<blockquote><p>{ "engines": { "node": "4.2.3" } }</p></blockquote>
+<p>N.B.: of course replace <em>"4.2.3"</em> with the node version your are using (that you can find with <em>node -v</em>)</li>
+<li>Finally follow the cookbook and you should be able to minify your files on heroku without any problems.</li>
+</ul>
+<p>The command <em>heroku buildpacks</em> should print something like that : <img class="aligncenter size-thumbnail wp-image-62" src="{{ site.baseurl }}/assets/screen-shot-2015-12-18-at-14-58-32.png?w=150" alt="Screen Shot 2015-12-18 at 14.58.32" width="150" height="39" /></p>
+<p>Cheers!</p>

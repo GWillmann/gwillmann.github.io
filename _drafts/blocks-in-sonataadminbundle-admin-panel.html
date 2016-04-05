@@ -1,0 +1,36 @@
+---
+layout: post
+title: Blocks in SonataAdminBundle admin panel
+date: 
+type: post
+published: false
+status: draft
+categories: []
+tags: []
+meta: {}
+author:
+  login: greggggy
+  email: gregwillm@gmail.com
+  display_name: greggggy
+  first_name: ''
+  last_name: ''
+---
+<p>Displaying custom blocks in Sonata Admin panel is not a straightforward process.</p>
+<p>Let's review the different steps in order to do so :</p>
+<h2>Create the custom block twig file :</h2>
+<ol>
+<li>Create the file <strong>AdminBundle/Resources/views/Block/block_statistics.html.twig </strong>with the content you would like to display. I chose to display the number of registered users :</li>
+</ol>
+<blockquote><p>{% extends sonata_block.templates.block_base %}</p>
+<p>{% block block %}</p>
+<div class="col-lg-3 col-xs-6">
+<p><!-- small box -->
+<div class="small-box bg-green">
+<div class="inner">
+<h3>{{ activatedUsers }}</h3>
+<p>Activés</p>
+</p></div>
+<div class="icon"> <i class="fa fa-users"></i> </div>
+<p> &lt;a href="rmo/user/user/list?filter[status][value]=5" class="small-box-footer"&gt; View more &lt;i class="fa fa-arrow-circle-right"&gt;&lt;/i&gt; &lt;/a&gt; &lt;/div&gt; &lt;/div&gt; {% endblock %}</p></div>
+</div>
+</blockquote>

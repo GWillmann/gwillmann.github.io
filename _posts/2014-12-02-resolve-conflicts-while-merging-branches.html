@@ -1,0 +1,43 @@
+---
+layout: post
+title: Resolve conflicts while merging branches
+date: 2014-12-02 13:47:51.000000000 +01:00
+type: post
+published: true
+status: publish
+categories:
+- Development
+- Git
+tags:
+- git
+meta:
+  _publicize_pending: '1'
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+  _wpas_skip_facebook: '1'
+  _wpas_skip_google_plus: '1'
+  _wpas_skip_twitter: '1'
+  _wpas_skip_linkedin: '1'
+  _wpas_skip_tumblr: '1'
+  _wpas_skip_path: '1'
+author:
+  login: greggggy
+  email: gregwillm@gmail.com
+  display_name: greggggy
+  first_name: ''
+  last_name: ''
+---
+<p>When conflicts happen while merging, git will add for you something like that in each problematic file :</p>
+<p>[code language="bash"]<br />
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD<br />
+text that is in the HEAD branch<br />
+=======<br />
+text that is in the dev branch<br />
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; dev<br />
+[/code]</p>
+<p>To resolve the conflicts, simply remove the text that you don't want as well as the tags git added to help you.</p>
+<p>Finally confirm the merge with :</p>
+<p>[code language="bash"]<br />
+git commit -am &quot;Resolved conflicts while merging&quot;<br />
+git push -u origin master<br />
+[/code]</p>
